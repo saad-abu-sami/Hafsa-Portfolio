@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default (Light/Nature) */
+    --color-primary: 46 125 50;
+    /* #2E7D32 */
+    --color-primary-light: 76 175 80;
+    /* #4CAF50 */
+    --color-primary-dark: 27 94 32;
+    /* #1B5E20 */
+
+    --color-secondary: 129 199 132;
+    /* #81C784 */
+    --color-secondary-light: 165 214 167;
+    /* #A5D6A7 */
+    --color-secondary-dark: 56 142 60;
+    /* #388E3C */
+
+    --color-earth: 121 85 72;
+    /* #795548 */
+    --color-earth-light: 161 136 127;
+    /* #A1887F */
+    --color-earth-dark: 93 64 55;
+    /* #5D4037 */
+
+    --color-background: 241 248 233;
+    /* #F1F8E9 */
+    --color-background-paper: 255 255 255;
+    --color-text: 31 41 55;
+  }
+
+  .dark {
+    --color-primary: 76 175 80;
+    /* #4CAF50 */
+    --color-primary-light: 102 187 106;
+    --color-primary-dark: 46 125 50;
+
+    --color-secondary: 129 199 132;
+    --color-secondary-light: 165 214 167;
+    --color-secondary-dark: 56 142 60;
+
+    --color-earth: 161 136 127;
+    --color-earth-light: 188 170 164;
+    --color-earth-dark: 121 85 72;
+
+    --color-background: 17 24 39;
+    /* #111827 */
+    --color-background-paper: 31 41 55;
+    /* #1F2937 */
+    --color-text: 243 244 246;
+  }
+
+  .vibrant {
+    --color-primary: 255 51 102;
+    /* #FF3366 */
+    --color-primary-light: 255 102 140;
+    --color-primary-dark: 204 0 51;
+
+    --color-secondary: 51 204 255;
+    /* #33CCFF */
+    --color-secondary-light: 102 224 255;
+    --color-secondary-dark: 0 153 204;
+
+    --color-earth: 255 153 0;
+    --color-earth-light: 255 184 77;
+    --color-earth-dark: 204 122 0;
+
+    --color-background: 255 240 245;
+    /* #FFF0F5 */
+    --color-background-paper: 255 255 255;
+    --color-text: 31 41 55;
+  }
+
+  .neon {
+    --color-primary: 0 255 153;
+    /* #00FF99 */
+    --color-primary-light: 51 255 179;
+    --color-primary-dark: 0 204 122;
+
+    --color-secondary: 204 0 255;
+    /* #CC00FF */
+    --color-secondary-light: 217 77 255;
+    --color-secondary-dark: 153 0 204;
+
+    --color-earth: 255 255 0;
+    --color-earth-light: 255 255 102;
+    --color-earth-dark: 204 204 0;
+
+    --color-background: 10 10 10;
+    --color-background-paper: 26 26 26;
+    --color-text: 255 255 255;
+  }
+
+  body {
+    @apply font-sans antialiased text-gray-800 dark:text-gray-100 bg-background transition-colors duration-300;
+    color: rgb(var(--color-text));
+    background-color: rgb(var(--color-background));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+
+  /* Hide default cursor on desktop */
+  @media (min-width: 768px) {
+    * {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(var(--color-background));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-primary) / 0.5);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--color-primary));
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+}
+
+.glass-dark {
+  @apply bg-black/30 backdrop-blur-md border border-white/10 shadow-lg;
+}
+
+/* Cursor Pointer Override for Interactive Elements */
+@layer utilities {
+  .cursor-pointer {
+    cursor: none !important;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
