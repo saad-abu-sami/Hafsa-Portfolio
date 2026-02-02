@@ -1,0 +1,6 @@
+source ~/.zshrc
+
+npm run dev
+
+source ~/.zshrc
+npm run dev

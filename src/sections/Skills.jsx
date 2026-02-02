@@ -1,17 +1,26 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
-const Counter = ({ value }) => (
-   <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
-      {({ isVisible }) => (
-         <span>
-            {isVisible ? <CountUp end={value} duration={2} /> : 0}
-         </span>
-      )}
-   </VisibilitySensor>
-);
+const Counter = ({ value }) => {
+   const [hasAnimated, setHasAnimated] = useState(false);
+
+   return (
+      <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
+         {({ isVisible }) => {
+            if (isVisible && !hasAnimated) {
+               setHasAnimated(true);
+            }
+            return (
+               <span>
+                  {hasAnimated ? <CountUp end={value} duration={2} /> : 0}
+               </span>
+            );
+         }}
+      </VisibilitySensor>
+   );
+};
 
 const SkillBar = ({ name, value, delay, color }) => (
    <div className="mb-8">
@@ -79,18 +88,20 @@ const TiltCard = ({ children, className }) => {
 
 const Skills = () => {
    const agriSkills = [
-      { name: 'Crop Physiology', value: 90 },
-      { name: 'Soil Fertility', value: 85 },
-      { name: 'Plant Pathology', value: 80 },
-      { name: 'GIS Mapping', value: 75 },
-      { name: 'Lab Research', value: 88 },
+      { name: 'Field-Based Crop Management', value: 80 },
+      { name: 'Agronomic practices for healthy crop development', value: 80 },
+      { name: 'Controlled Environment Agriculture', value: 85 },
+      { name: 'Greenhouse management', value: 90 },
+      { name: 'Hydroponic system operation', value: 83 },
+      { name: 'Climate-resilient and sustainable plant production', value: 85 },
    ];
 
    const techSkills = [
-      { name: 'Python Basics', value: 70 },
-      { name: 'Data Analysis', value: 80 },
+      { name: 'R programming', value: 75 },
+      { name: 'Sigmaplot', value: 80 },
       { name: 'MS Excel', value: 95 },
-      { name: 'Scientific Writing', value: 85 },
+      { name: 'Scientific manuscript writing', value: 82 },
+      { name: 'MS Word', value: 94 },
    ];
 
    return (

@@ -13,8 +13,9 @@ const navLinks = [
    { name: 'About', to: 'about' },
    { name: 'Skills', to: 'skills' },
    { name: 'Research', to: 'research' },
-   { name: 'Academic Projects', to: 'academic-projects' },
+   { name: 'Footprints', to: 'footprints' },
    { name: 'Experience', to: 'experience' },
+   { name: 'Achievements', to: 'achievements' },
    { name: 'Contact', to: 'contact' },
 ];
 
@@ -53,8 +54,8 @@ const Navbar = () => {
                <span>Hafsa.</span>
             </Link>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
+            {/* Desktop Menu - Hidden on tablets (md) and below, visible on large screens (lg) */}
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8">
                {navLinks.map((link) => (
                   <Link
                      key={link.name}
@@ -64,7 +65,7 @@ const Navbar = () => {
                      offset={-70}
                      duration={500}
                      activeClass="text-primary dark:text-primary-light font-bold"
-                     className="cursor-pointer text-gray-700 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors font-medium relative group"
+                     className="cursor-pointer text-gray-700 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors font-medium relative group text-sm xl:text-base"
                   >
                      {link.name}
                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary dark:bg-primary-light transition-all duration-300 group-hover:w-full"></span>
@@ -103,8 +104,8 @@ const Navbar = () => {
                </motion.button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center gap-4">
+            {/* Mobile/Tablet Menu Button - Visible on tablets (lg) and below */}
+            <div className="lg:hidden flex items-center gap-4">
                <motion.button
                   onClick={toggleTheme}
                   className="p-2 rounded-full bg-primary/10 dark:bg-yellow-500/20"
@@ -122,30 +123,64 @@ const Navbar = () => {
             </div>
          </div>
 
-         {/* Mobile Menu */}
-         {isOpen && (
-            <motion.div
-               initial={{ opacity: 0, height: 0 }}
-               animate={{ opacity: 1, height: 'auto' }}
-               className="md:hidden glass dark:glass-dark absolute w-full border-t border-gray-200 dark:border-gray-700"
-            >
-               <div className="flex flex-col items-center py-4 gap-4">
-                  {navLinks.map((link) => (
-                     <Link
-                        key={link.name}
-                        to={link.to}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                        onClick={() => setIsOpen(false)}
-                        className="cursor-pointer text-gray-700 dark:text-gray-100 hover:text-primary font-medium"
-                     >
-                        {link.name}
-                     </Link>
-                  ))}
-               </div>
-            </motion.div>
-         )}
+         {/* Mobile Menu Overlay */}
+         <AnimatePresence>
+            {isOpen && (
+               <motion.div
+                  initial={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
+                  animate={{ opacity: 1, clipPath: "circle(150% at 100% 0%)" }}
+                  exit={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  style={{
+                     backgroundColor: 'rgb(var(--color-background) / 0.98)',
+                     color: 'rgb(var(--color-text))'
+                  }}
+                  className="fixed inset-0 top-0 left-0 w-full h-screen backdrop-blur-xl z-[-1] flex flex-col items-center justify-center"
+               >
+                  <motion.div
+                     initial={{ opacity: 0, y: 30 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ staggerChildren: 0.08, delayChildren: 0.2 }}
+                     className="flex flex-col items-center justify-center gap-6 w-full max-w-sm mx-auto"
+                  >
+                     {navLinks.map((link, index) => (
+                        <motion.div
+                           key={link.name}
+                           initial={{ opacity: 0, x: -30 }}
+                           animate={{ opacity: 1, x: 0 }}
+                           transition={{ duration: 0.3 }}
+                           className="w-full"
+                        >
+                           <Link
+                              to={link.to}
+                              smooth={true}
+                              offset={-70}
+                              duration={500}
+                              onClick={() => setIsOpen(false)}
+                              className="group relative flex items-center justify-center w-full py-2 cursor-pointer transition-colors duration-300"
+                           >
+                              <span
+                                 className="text-4xl font-display font-bold text-[rgb(var(--color-text))] group-hover:text-[rgb(var(--color-primary))] transition-colors duration-300"
+                              >
+                                 {link.name}
+                              </span>
+
+                              {/* Animated Underline */}
+                              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-[rgb(var(--color-primary))] rounded-full transition-all duration-300 ease-out group-hover:w-16 opacity-0 group-hover:opacity-100"></span>
+
+                              {/* Hover Glow Effect */}
+                              <span className="absolute inset-0 bg-[rgb(var(--color-primary))] opacity-0 group-hover:opacity-5 blur-xl rounded-full transition-opacity duration-300 -z-10 scale-0 group-hover:scale-110"></span>
+                           </Link>
+                        </motion.div>
+                     ))}
+                  </motion.div>
+
+                  {/* Decorative Elements matching theme */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl pointer-events-none translate-y-1/2 -translate-x-1/2"></div>
+               </motion.div>
+            )}
+         </AnimatePresence>
       </motion.nav>
    );
 };

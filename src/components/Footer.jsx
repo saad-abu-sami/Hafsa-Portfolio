@@ -2,7 +2,7 @@ import React from 'react';
 import { IconButton } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import SpaIcon from '@mui/icons-material/Spa';
 
@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="flex gap-4 mb-8">
                <IconButton
                   component="a"
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/share/17Nuwxo95n/"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ color: 'white', transition: 'all 0.3s ease', '&:hover': { bgcolor: 'rgba(255,255,255,0.1)', transform: 'scale(1.1) translateY(-3px)', boxShadow: '0 10px 20px rgba(0,0,0,0.3)' } }}
@@ -46,16 +46,16 @@ const Footer = () => {
                </IconButton>
                <IconButton
                   component="a"
-                  href="https://twitter.com"
+                  href="https://x.com/HTasnim42190"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ color: 'white', transition: 'all 0.3s ease', '&:hover': { bgcolor: 'rgba(255,255,255,0.1)', transform: 'scale(1.1) translateY(-3px)', boxShadow: '0 10px 20px rgba(0,0,0,0.3)' } }}
                >
-                  <TwitterIcon />
+                  <XIcon />
                </IconButton>
                <IconButton
                   component="a"
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/htasnimjuthi"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ color: 'white', transition: 'all 0.3s ease', '&:hover': { bgcolor: 'rgba(255,255,255,0.1)', transform: 'scale(1.1) translateY(-3px)', boxShadow: '0 10px 20px rgba(0,0,0,0.3)' } }}

@@ -33,7 +33,7 @@ const Hero = () => {
    };
 
    return (
-      <section id="hero" ref={ref} className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <section id="hero" ref={ref} className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-24 lg:pb-0">
          {/* Background Elements */}
          <div className="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-green-50 to-background dark:from-gray-900 dark:to-gray-900 opacity-50"></div>
          <motion.div
@@ -51,7 +51,7 @@ const Hero = () => {
             <SpaIcon style={{ fontSize: 150 }} />
          </motion.div>
 
-         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
 
             {/* Text Content */}
             <motion.div
@@ -59,23 +59,23 @@ const Hero = () => {
                whileInView={{ opacity: 1, x: 0 }}
                viewport={{ once: true }}
                transition={{ duration: 0.8 }}
-               className="z-10"
+               className="z-10 order-2 lg:order-1 text-center lg:text-left"
             >
                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-block px-4 py-1 mb-4 rounded-full bg-primary/10 text-primary-dark dark:text-primary-light font-medium"
+                  className="inline-block px-4 py-2 mb-4 rounded-full bg-primary/10 text-primary-dark dark:text-primary-light font-medium text-sm md:text-base border border-primary/20"
                >
-                  {getGreeting()} 🌱 Agriculture Student
+                  {getGreeting()} 🌱
                </motion.div>
-               <h1 className="text-5xl md:text-7xl font-display font-bold text-gray-800 dark:text-white mb-4">
-                  Hi, I'm <span className="text-primary">Hafsa Tasnim</span>
+               <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-gray-800 dark:text-white mb-4 leading-tight">
+                  Hi, I'm <span className="text-primary block lg:inline">Hafsa Tasnim</span>
                </h1>
-               <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 font-light">
-                  Crop Science | Sustainable Farming Enthusiast
+               <h2 className="text-lg md:text-2xl text-gray-600 dark:text-gray-300 mb-6 lg:mb-8 font-light">
+                  Crop Science | Sustainable Development Enthusiast
                </h2>
-               <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-lg leading-relaxed">
+               <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed text-base md:text-lg">
                   Dedicated to advancing <span className="relative inline-block font-semibold text-gray-700 dark:text-gray-200">
                      sustainable agriculture
                      <svg className="absolute -bottom-1 left-0 w-full h-3" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -87,7 +87,7 @@ const Hero = () => {
                         </defs>
                         <path d="M0 5 Q 50 10 100 5" stroke="url(#grad1)" strokeWidth="3" fill="none" strokeLinecap="round" />
                      </svg>
-                  </span> through research in crop physiology and soil science. Passionate about applying technology to solve <span className="relative inline-block font-semibold text-gray-700 dark:text-gray-200">
+                  </span> through research in crop physiology and ecology. Passionate about applying technology to solve <span className="relative inline-block font-semibold text-gray-700 dark:text-gray-200">
                      farming challenges
                      <svg className="absolute -bottom-1 left-0 w-full h-3" viewBox="0 0 100 10" preserveAspectRatio="none">
                         <defs>
@@ -101,13 +101,20 @@ const Hero = () => {
                   </span>.
                </p>
 
-               <div className="flex gap-4">
+               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
                   <Button
                      variant="contained"
                      color="primary"
                      size="large"
                      startIcon={<DownloadIcon />}
-                     sx={{ borderRadius: '50px', textTransform: 'none', fontSize: '1.1rem' }}
+                     sx={{
+                        borderRadius: '50px',
+                        textTransform: 'none',
+                        fontSize: '1rem',
+                        px: 4,
+                        py: 1.5,
+                        minWidth: '180px' // Added min-width for consistency
+                     }}
                   >
                      Download CV
                   </Button>
@@ -117,7 +124,15 @@ const Hero = () => {
                      size="large"
                      startIcon={<EmailIcon />}
                      href="#contact"
-                     sx={{ borderRadius: '50px', textTransform: 'none', fontSize: '1.1rem', borderWidth: 2 }}
+                     sx={{
+                        borderRadius: '50px',
+                        textTransform: 'none',
+                        fontSize: '1rem',
+                        borderWidth: 2,
+                        px: 4,
+                        py: 1.5,
+                        minWidth: '180px' // Added min-width for consistency
+                     }}
                   >
                      Contact Me
                   </Button>
@@ -130,9 +145,9 @@ const Hero = () => {
                whileInView={{ opacity: 1, scale: 1 }}
                viewport={{ once: true }}
                transition={{ duration: 0.8 }}
-               className="relative flex justify-center items-center h-[500px]" // Fixed height container for stability
+               className="relative flex justify-center items-center h-[300px] md:h-[400px] order-1 lg:order-2"
             >
-               <div className="relative w-80 h-80 md:w-96 md:h-96">
+               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                   {/* Rotating Border */}
                   <motion.div
                      animate={{ rotate: 360 }}
@@ -161,19 +176,19 @@ const Hero = () => {
                   <motion.div
                      animate={{ y: [0, -10, 0] }}
                      transition={{ duration: 4, repeat: Infinity }}
-                     className="absolute -right-8 top-10 glass dark:glass-dark p-3 rounded-xl flex items-center gap-2 z-20"
+                     className="absolute -right-4 md:-right-8 top-10 glass dark:glass-dark p-2 md:p-3 rounded-xl flex items-center gap-2 z-20 shadow-lg"
                   >
-                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                     <span className="text-sm font-medium text-gray-800 dark:text-white">Research Focused</span>
+                     <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-500"></div>
+                     <span className="text-xs md:text-sm font-medium text-gray-800 dark:text-white">Research Focused</span>
                   </motion.div>
 
                   <motion.div
                      animate={{ y: [0, 10, 0] }}
                      transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-                     className="absolute -left-8 bottom-20 glass dark:glass-dark p-3 rounded-xl flex items-center gap-2 z-20"
+                     className="absolute -left-4 md:-left-8 bottom-16 md:bottom-20 glass dark:glass-dark p-2 md:p-3 rounded-xl flex items-center gap-2 z-20 shadow-lg"
                   >
-                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                     <span className="text-sm font-medium text-gray-800 dark:text-white">Sustainable Tech</span>
+                     <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-500"></div>
+                     <span className="text-xs md:text-sm font-medium text-gray-800 dark:text-white">Sustainable Tech</span>
                   </motion.div>
                </div>
             </motion.div>

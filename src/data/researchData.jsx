@@ -1,100 +1,96 @@
-import { Spa, Biotech, Science, Agriculture } from '@mui/icons-material';
-
 export const researchData = [
    {
       id: 1,
-      title: "Climate-Resilient Crop Varieties",
-      summary: "Developing new rice varieties capable of withstanding extreme weather conditions.",
+      shortName: "Melatonin Stress Tolerance in Tomato",
+      title: "Melatonin-Mediated Combined Stress Tolerance in Tomato",
+      summary: "Climate-induced drought and heat stress severely limit tomato growth, physiology, and yield. This study assessed the role of foliar-applied melatonin in mitigating individual and combined drought and heat stresses in BARI Tomato-21. Stress conditions markedly reduced biomass, photosynthetic efficiency, pigment content, pollen viability, and fruit development while intensifying oxidative damage. Melatonin application, particularly at 100 µM, significantly restored growth, photosynthetic performance, reproductive traits, and antioxidant enzyme activity, resulting in improved stress tolerance index scores. These findings highlight melatonin as an effective regulator of physiological resilience under concurrent abiotic stresses.",
       date: "2024",
-      image: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=2072&auto=format&fit=crop",
-      icon: <Spa fontSize="large" />,
-      fullContent: `
-         <h3>Abstract</h3>
-         <p>This research focuses on the genetic modification and selective breeding of rice varieties to enhance their resilience against drought and salinity. By identifying key stress-response genes, we have successfully developed prototypes that show a 30% increase in yield under stress conditions compared to traditional varieties.</p>
-         
-         <h3>Methodology</h3>
-         <p>We utilized CRISPR-Cas9 technology to target specific genomic regions associated with osmotic stress tolerance. Field trials were conducted in coastal regions of Bangladesh with high salinity levels.</p>
-         
-         <h3>Key Findings</h3>
-         <ul>
-            <li>Identification of OsSALT1 gene as a primary regulator of salinity tolerance.</li>
-            <li>Developed 'ResiliRice-1' variety showing robust growth in 12dS/m salinity.</li>
-            <li>30% yield improvement in drought-prone areas.</li>
-         </ul>
-      `,
-      publicationLink: "#",
-      tags: ["Genetics", "Climate Change", "Food Security"]
+      image: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?q=80&w=2070&auto=format&fit=crop",
+      icon: "Spa",
+      keywords: ["Combined Stress Tolerance", "Melatonin Signaling", "Reproductive Resilience"],
+      impact: "Offers a hormone-based intervention to sustain tomato productivity under escalating drought–heat scenarios driven by climate change.",
+      publicationLink: null,
+      tags: ["Climate Resilience", "Phytohormones", "Stress Physiology"]
    },
    {
       id: 2,
-      title: "Sustainable Pest Management",
-      summary: "Eco-friendly approaches to controlling agricultural pests without harmful chemicals.",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?q=80&w=2096&auto=format&fit=crop",
-      icon: <Biotech fontSize="large" />,
-      fullContent: `
-         <h3>Abstract</h3>
-         <p>This study explores the efficacy of bio-pesticides derived from neem and other indigenous plants. Our goal is to reduce the dependency on synthetic pesticides which harm the ecosystem and human health.</p>
-         
-         <h3>Methodology</h3>
-         <p>Extracts from Azadirachta indica (Neem) were formulated into various concentrations and tested against common rice pests like the Brown Planthopper.</p>
-         
-         <h3>Key Findings</h3>
-         <ul>
-            <li>Neem-based formulations reduced pest population by 85% within 48 hours.</li>
-            <li>No negative impact observed on beneficial insects like bees and ladybugs.</li>
-            <li>Cost-effective alternative for small-scale farmers.</li>
-         </ul>
-      `,
-      publicationLink: "#",
-      tags: ["Organic Farming", "Pest Control", "Sustainability"]
+      shortName: "Waterlogging Tolerance in Chilli",
+      title: "Ethephon and H₂O₂-Enhanced Waterlogging Tolerance in Chilli",
+      summary: "Waterlogging severely limits chilli productivity by disrupting root function, photosynthesis, and redox balance. This study evaluated the effectiveness of foliar-applied ethephon (ET) and hydrogen peroxide (H₂O₂) in enhancing waterlogging tolerance in local and hybrid chilli genotypes under hydroponic conditions. Waterlogging significantly reduced growth, photosynthetic efficiency, and pigment content while increasing oxidative damage. Application of ET and H₂O₂—especially their combined treatment—improved root architecture through enhanced aerenchyma formation, strengthened antioxidant defense systems, reduced lipid peroxidation, and restored physiological performance, thereby conferring superior waterlogging tolerance.",
+      date: "2024",
+      image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070&auto=format&fit=crop",
+      icon: "WaterDrop",
+      keywords: ["Waterlogging Tolerance", "Root Architectural Plasticity", "Redox Homeostasis"],
+      impact: "Demonstrates a practical hormonal strategy to improve chilli resilience and productivity in waterlogged and poorly drained agricultural soils.",
+      publicationLink: null,
+      tags: ["Abiotic Stress", "Root Biology", "Antioxidant Defense"]
    },
    {
       id: 3,
-      title: "Soil Health Monitoring System",
-      summary: "IoT-based system for real-time monitoring of soil nutrients and moisture levels.",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop",
-      icon: <Science fontSize="large" />,
-      fullContent: `
-         <h3>Abstract</h3>
-         <p>Integration of IoT sensors in agriculture allows for precision farming. This project developed a low-cost sensor network to monitor NPK levels, pH, and moisture in real-time.</p>
-         
-         <h3>Methodology</h3>
-         <p>Sensors were deployed in a grid pattern across a 5-acre farm. Data was transmitted via LoRaWAN to a central dashboard accessible by farmers via a mobile app.</p>
-         
-         <h3>Key Findings</h3>
-         <ul>
-            <li>Real-time data enabled precise fertilizer application, reducing waste by 40%.</li>
-            <li>Water usage reduced by 25% through optimized irrigation schedules.</li>
-            <li>Increased crop uniformity and quality.</li>
-         </ul>
-      `,
-      publicationLink: "#",
-      tags: ["IoT", "Precision Agriculture", "Technology"]
+      shortName: "Cold Tolerance in Boro Rice",
+      title: "Thermal Buffering Strategy for Cold Tolerance in Boro Rice",
+      summary: "Low-temperature stress severely hampers the establishment of Boro rice seedlings in northern Bangladesh. This study examined morpho-physiological and biochemical responses of three Boro rice varieties under cold stress with or without stagnant water. Low temperature markedly reduced growth, photosynthetic efficiency, and gas exchange while intensifying oxidative damage. Varietal responses differed, with BRRIdhan89 exhibiting superior cold tolerance. Maintaining stagnant water significantly delayed leaf chlorosis, stabilized physiological traits, and reduced oxidative injury across all cultivars, indicating its role as a thermal buffer against cold-induced seedling damage.",
+      date: "2024",
+      image: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=2072&auto=format&fit=crop",
+      icon: "AcUnit",
+      keywords: ["Cold Stress Tolerance", "Physiological Stability", "Thermal Buffering"],
+      impact: "Provides an agronomic strategy and varietal insight to protect Boro rice seedlings from cold-wave damage in low-temperature-prone regions of Bangladesh.",
+      publicationLink: null,
+      tags: ["Rice Physiology", "Climate Adaptation", "Varietal Screening"]
    },
    {
       id: 4,
-      title: "Vertical Farming in Urban Areas",
-      summary: "Optimizing hydroponic systems for high-density urban food production.",
-      date: "2022",
-      image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=2070&auto=format&fit=crop",
-      icon: <Agriculture fontSize="large" />,
-      fullContent: `
-         <h3>Abstract</h3>
-         <p>With rapid urbanization, arable land is shrinking. This research investigates the viability of vertical farming systems for growing leafy greens and herbs in city centers.</p>
-         
-         <h3>Methodology</h3>
-         <p>A comparative study between nutrient film technique (NFT) and deep water culture (DWC) systems was conducted in a controlled indoor environment.</p>
-         
-         <h3>Key Findings</h3>
-         <ul>
-            <li>Vertical systems produced 10x more yield per square foot compared to traditional farming.</li>
-            <li>Water usage was 95% less than conventional methods.</li>
-            <li>Year-round production independent of weather conditions.</li>
-         </ul>
-      `,
-      publicationLink: "#",
-      tags: ["Hydroponics", "Urban Farming", "Innovation"]
+      shortName: "Salt Tolerance in Maize",
+      title: "H₂O₂-Mediated Salinity Stress Mitigation in Maize",
+      summary: "Rising soil salinity threatens crop productivity in the coastal regions of Bangladesh. This study evaluated seed priming and foliar application of hydrogen peroxide (H₂O₂) as a strategy to enhance salt tolerance in maize seedlings. Salt stress severely impaired growth, photosynthesis, and pigment content while inducing oxidative damage and ionic imbalance. Exogenous H₂O₂, particularly at 60–80 µM, significantly improved biomass, photosynthetic efficiency, antioxidant enzyme activity, and K⁺/Na⁺ balance while reducing lipid peroxidation. These results demonstrate H₂O₂-mediated redox signaling as an effective mechanism for salinity stress mitigation.",
+      date: "2023",
+      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop",
+      icon: "Science",
+      keywords: ["Salinity Stress Mitigation", "Redox Signaling", "Ion Homeostasis"],
+      impact: "Introduces a low-cost, eco-friendly priming and spray approach to sustain maize production in salt-affected coastal agroecosystems.",
+      publicationLink: null,
+      tags: ["Salinity Tolerance", "Seed Priming", "Coastal Agriculture"]
+   },
+   {
+      id: 5,
+      shortName: "Phytohormone-Mediated Cadmium Stress Mitigation in Spinach",
+      title: "Salicylic Acid and Methyl Jasmonate Mitigate Cadmium Toxicity in Spinach",
+      summary: "Cadmium contamination poses a serious threat to food safety and crop productivity. This study evaluated the role of exogenously applied salicylic acid (SA) and methyl jasmonate (MeJA) in mitigating Cd-induced stress in hydroponically grown spinach (cv. Sathi). Cd stress severely impaired growth, photosynthetic efficiency, and redox balance while enhancing oxidative damage. Seed priming and nutrient supplementation with SA and MeJA—particularly 100 µM SA and 5 µM MeJA—significantly improved biomass, physiological performance, antioxidant defense, and reduced Cd accumulation and translocation, highlighting their potential as stress-alleviating agents.",
+      date: "2025",
+      image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?q=80&w=2070&auto=format&fit=crop",
+      icon: "Eco",
+      keywords: ["Cadmium Stress Mitigation", "Phytohormone Regulation", "Redox Homeostasis"],
+      impact: "Provides a hormone-based strategy to enhance spinach tolerance and reduce cadmium entry into the food chain in contaminated agroecosystems.",
+      publicationLink: "https://doi.org/10.1007/s42729-025-02302-5",
+      publicationText: "Mondal, S., Haque, M. S., Rabbi, M. F., Tasnim, H., Iffat, A., Baroi, A., ... & Hossain, M. A. (2025). Salicylic Acid and Methyl Jasmonate Mitigate Cadmium Toxicity in Spinach (Spinacea oleracea L.) by Modulating Metal Translocation, Growth, Photo-Physiology and Redox Regulation. Journal of Soil Science and Plant Nutrition, 25(1), 1524-1540.",
+      tags: ["Heavy Metal", "Food Safety", "Phytohormones"]
+   },
+   {
+      id: 6,
+      shortName: "Cadmium Stress in Amaranth",
+      title: "Phytohormone-Mediated Cadmium Stress Alleviation in Green Amaranth",
+      summary: "Cadmium contamination in vegetable-based agroecosystems poses serious risks to plant performance and food safety. This study evaluated the efficacy of salicylic acid (SA) and methyl jasmonate (MeJA) in alleviating Cd-induced toxicity in green amaranth under hydroponic conditions. Cadmium stress significantly disrupted growth, photosynthetic efficiency, and redox balance while elevating oxidative damage. Seed priming and supplementation with SA and MeJA—particularly 100 µM SA and 5 µM MeJA—enhanced antioxidant defense, reduced Cd uptake and translocation, and restored physiological functions, demonstrating their potential for mitigating heavy metal stress.",
+      date: "2025",
+      image: "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?q=80&w=2096&auto=format&fit=crop",
+      icon: "Biotech",
+      keywords: ["Heavy Metal Toxicity", "Phytohormone Interaction", "Redox Regulation"],
+      impact: "Supports hormone-based interventions to minimize cadmium accumulation in leafy vegetables and improve food safety in contaminated soils.",
+      publicationLink: "https://doi.org/10.1371/journal.pone.0329373",
+      publicationText: "Hussain, M. T., Haque, M. S., Rabbi, M. F., Tasnim, H., et al. (2025). Cadmium-induced impairment in growth, photosynthetic apparatus and redox regulation in green amaranth (Amaranthus viridis L.) plant attenuated by salicylic acid and methyl jasmonate. PLoS ONE, 20(8), e0329373.",
+      tags: ["Heavy Metal", "Leafy Vegetables", "Phytohormones"]
+   },
+   {
+      id: 7,
+      shortName: "Drought Tolerance in Wheat",
+      title: "Foliar Phytohormones Enhance Drought Resilience in Wheat",
+      summary: "Frequent droughts threaten wheat growth and productivity worldwide. This study evaluated the effects of foliar-applied abscisic acid (ABA) and glycine betaine (GB) on drought tolerance in two wheat cultivars (WMRI-1 and BARI GOM-33) at anthesis and grain-filling stages. Drought stress reduced photosynthesis, chlorophyll content, and increased oxidative damage. Foliar ABA and GB significantly enhanced photosynthetic efficiency, antioxidant enzyme activities, and stress tolerance indices, while reducing lipid peroxidation and H₂O₂ accumulation. These treatments ultimately improved physiological performance and grain yield under water-limited conditions.",
+      date: "2024",
+      image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2070&auto=format&fit=crop",
+      icon: "Agriculture",
+      keywords: ["Drought Stress Mitigation", "Antioxidant Defense", "Foliar Phytohormones"],
+      impact: "Demonstrates a practical foliar-based strategy to enhance wheat resilience and yield under water scarcity.",
+      publicationLink: "https://doi.org/10.1007/s10725-024-01179-3",
+      publicationText: "Haque, M. S., Hossain, K. S., Baroi, A., Alamery, S., Attia, K. A., Hafez, Y. M., ... & Hossain, M. A. (2024). Foliar application of abscisic acid and glycine betaine induces tolerance to water scarcity in wheat. Plant Growth Regulation, 104(3), 1209-1225.",
+      tags: ["Drought Tolerance", "Wheat Physiology", "Foliar Application"]
    }
 ];

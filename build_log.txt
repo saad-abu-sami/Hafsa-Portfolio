@@ -1,7 +1,9 @@
 
-> agricultural-portfolio@0.0.0 build /Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7
+> agricultural-portfolio@0.0.0 build
 > vite build
 
+(node:18690) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
 vite v2.9.18 building for production...
 transforming...
 Module level directives cause errors when bundled, 'use client' was ignored.
@@ -10823,43 +10825,32 @@ Module level directives cause errors when bundled, 'use client' was ignored.
 Module level directives cause errors when bundled, 'use client' was ignored.
 Module level directives cause errors when bundled, 'use client' was ignored.
 Module level directives cause errors when bundled, 'use client' was ignored.
-✓ 11958 modules transformed.
-'Eco' is not exported by node_modules/@mui/icons-material/esm/index.js, imported by src/sections/AcademicProjects.jsx
-file: /Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/src/sections/AcademicProjects.jsx:8:26
- 6: import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
- 7: import ChevronRightIcon from '@mui/icons-material/ChevronRight';
- 8: import { School, Science, Eco, WaterDrop, LocalFlorist, Agriculture } from '@mui/icons-material';
-                              ^
- 9: 
-10: const iconMap = {
+✓ 11990 modules transformed.
+'Eco' is not exported by node_modules/@mui/icons-material/esm/index.js, imported by src/pages/ResearchDetail.jsx
+file: /Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/src/pages/ResearchDetail.jsx:10:64
+ 8: import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+ 9: import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+10: import { Spa, Biotech, Science, Agriculture, WaterDrop, AcUnit, Eco } from '@mui/icons-material';
+                                                                    ^
+11: import { researchData } from '../data/researchData.jsx';
 error during build:
-Error: 'Eco' is not exported by node_modules/@mui/icons-material/esm/index.js, imported by src/sections/AcademicProjects.jsx
-    at error (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:198:30)
-    at Module.error (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:12543:16)
-    at Module.traceVariable (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:12902:29)
-    at ModuleScope.findVariable (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:11554:39)
-    at Identifier.bind (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:7553:40)
-    at Property.bind (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:5383:23)
-    at ObjectExpression.bind (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:5379:73)
-    at VariableDeclarator.bind (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:5383:23)
-    at VariableDeclaration.bind (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:5379:73)
-    at Program.bind (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:5379:73)
-    at Module.bindReferences (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:12539:18)
-    at Graph.sortModules (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:23108:20)
-    at Graph.build (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:22986:14)
-    at async /Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:23680:13
-    at async catchUnfinishedHookActions (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:23162:20)
-    at async rollupInternal (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/rollup/dist/shared/rollup.js:23677:5)
-    at async doBuild (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/vite/dist/node/chunks/dep-0a035c79.js:41710:24)
-    at async build (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/vite/dist/node/chunks/dep-0a035c79.js:41552:16)
-    at async CAC.<anonymous> (/Users/saadabusami/Drive_personal/Copy of hafsa profile/Portfolio Hafsa 1.7/node_modules/vite/dist/node/cli.js:738:9)
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! agricultural-portfolio@0.0.0 build: `vite build`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the agricultural-portfolio@0.0.0 build script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /Users/saadabusami/.npm/_logs/2025-12-03T04_00_58_167Z-debug.log
+Error: 'Eco' is not exported by node_modules/@mui/icons-material/esm/index.js, imported by src/pages/ResearchDetail.jsx
+    at error (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:198:30)
+    at Module.error (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:12543:16)
+    at Module.traceVariable (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:12902:29)
+    at ModuleScope.findVariable (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:11554:39)
+    at Identifier.bind (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:7553:40)
+    at Property.bind (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:5383:23)
+    at ObjectExpression.bind (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:5379:73)
+    at VariableDeclarator.bind (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:5383:23)
+    at VariableDeclaration.bind (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:5379:73)
+    at Program.bind (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:5379:73)
+    at Module.bindReferences (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:12539:18)
+    at Graph.sortModules (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:23108:20)
+    at Graph.build (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:22986:14)
+    at async /Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:23680:13
+    at async catchUnfinishedHookActions (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:23162:20)
+    at async rollupInternal (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/rollup/dist/shared/rollup.js:23677:5)
+    at async doBuild (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/vite/dist/node/chunks/dep-0a035c79.js:41710:24)
+    at async build (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/vite/dist/node/chunks/dep-0a035c79.js:41552:16)
+    at async CAC.<anonymous> (/Users/saadabusami/Drive_Learn/Programming 10GB/JavaScript Learn All/Website Making/Portfolio Hafsa/node_modules/vite/dist/node/cli.js:738:9)

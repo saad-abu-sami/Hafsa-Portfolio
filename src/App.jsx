@@ -5,6 +5,7 @@ import About from './sections/About';
 import Skills from './sections/Skills';
 
 import Experience from './sections/Experience';
+import Achievements from './sections/Achievements';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
@@ -17,8 +18,8 @@ import { SettingsProvider, useSettings } from './context/SettingsContext';
 import { Routes, Route } from 'react-router-dom';
 import Research from './sections/Research';
 import ResearchDetail from './pages/ResearchDetail';
-import AcademicProjects from './sections/AcademicProjects';
-import AcademicProjectDetail from './pages/AcademicProjectDetail';
+import Footprints from './sections/Footprints';
+import FootprintsDetail from './pages/FootprintsDetail';
 
 // Create a wrapper component to use the useSettings hook
 const AppContent = () => {
@@ -63,15 +64,16 @@ const AppContent = () => {
                         <About />
                         <Skills />
                         <Research />
-                        <AcademicProjects />
+                        <Footprints />
                         <Experience />
+                        <Achievements />
                         <Contact />
                      </main>
                      <Footer />
                   </>
                } />
                <Route path="/research/:id" element={<ResearchDetail />} />
-               <Route path="/academic-project/:id" element={<AcademicProjectDetail />} />
+               <Route path="/footprints/:id" element={<FootprintsDetail />} />
             </Routes>
          </div>
       </ThemeProvider>

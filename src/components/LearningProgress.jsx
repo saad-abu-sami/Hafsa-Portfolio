@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const LearningProgress = () => {
    const data = [
-      { label: 'Research Papers Read', count: 142, color: 'bg-blue-500' },
-      { label: 'Field Hours', count: 350, color: 'bg-green-500' },
-      { label: 'Code Commits', count: 890, color: 'bg-purple-500' },
+      { label: 'Research Papers Read', count: 60, color: 'bg-blue-500' },
+      { label: 'Field Hours', count: 500, color: 'bg-green-500' },
+      { label: 'Lab Hours', count: 600, color: 'bg-purple-500' },
    ];
 
    return (
