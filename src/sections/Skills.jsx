@@ -45,7 +45,7 @@ const SkillBar = ({ name, value, delay, color }) => (
    </div>
 );
 
-const TiltCard = ({ children, className }) => {
+const TiltCard = ({ children, className, gradientFrom = "from-primary", gradientTo = "to-secondary" }) => {
    const x = useMotionValue(0);
    const y = useMotionValue(0);
 
@@ -77,9 +77,19 @@ const TiltCard = ({ children, className }) => {
          style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
          onMouseMove={handleMouseMove}
          onMouseLeave={handleMouseLeave}
-         className={className}
+         className={`relative rounded-2xl p-[2px] bg-gradient-to-br ${gradientFrom} via-transparent ${gradientTo} shadow-lg hover:shadow-2xl transition-all duration-300 group`}
       >
-         <div style={{ transform: "translateZ(50px)" }}>
+         {/* Soft glowing backdrop that appears on hover */}
+         <div 
+            className={`absolute inset-0 bg-gradient-to-br ${gradientFrom} via-transparent ${gradientTo} opacity-0 group-hover:opacity-60 blur-xl transition-opacity duration-500 rounded-2xl -z-10`} 
+            style={{ transform: "translateZ(-20px)" }}
+         />
+
+         {/* The solid inner card */}
+         <div 
+            className={`${className} rounded-[14px] w-full h-full relative z-10`} 
+            style={{ transform: "translateZ(40px)" }}
+         >
             {children}
          </div>
       </motion.div>
@@ -124,7 +134,11 @@ const Skills = () => {
 
             <div className="grid md:grid-cols-2 gap-16 perspective-1000">
                {/* Agricultural Skills */}
-               <TiltCard className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-green-100 dark:border-gray-700 transform transition-all duration-200 hover:shadow-2xl">
+               <TiltCard 
+                  className="bg-white dark:bg-gray-800 p-8"
+                  gradientFrom="from-primary/80"
+                  gradientTo="to-transparent"
+               >
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 flex items-center gap-2">
                      <span className="w-2 h-8 bg-primary rounded-full"></span>
                      Agricultural Expertise
@@ -143,7 +157,11 @@ const Skills = () => {
                </TiltCard>
 
                {/* Technical Skills */}
-               <TiltCard className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-green-100 dark:border-gray-700 transform transition-all duration-200 hover:shadow-2xl">
+               <TiltCard 
+                  className="bg-white dark:bg-gray-800 p-8"
+                  gradientFrom="from-secondary/80"
+                  gradientTo="to-transparent"
+               >
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 flex items-center gap-2">
                      <span className="w-2 h-8 bg-secondary rounded-full"></span>
                      Technical Proficiency

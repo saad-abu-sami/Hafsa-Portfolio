@@ -13,7 +13,7 @@ export const footprintsData = [
       location: "Rangamati",
       date: "August 2023",
       category: "Hill Tracks",
-      image: "https://images.unsplash.com/photo-1582650803869-7d0b83b3e646?q=80&w=2070&auto=format&fit=crop",
+      image: "/images/Sajek Valley.jpg",
       icon: "Map",
       description: "A journey above the clouds in the Queen of Hills.",
       fullContent: `
@@ -37,7 +37,7 @@ export const footprintsData = [
       location: "Chittagong",
       date: "December 2022",
       category: "Coastal",
-      image: "https://images.unsplash.com/photo-1599583789063-8dd4ad740393?auto=format&fit=crop&q=80&w=1000",
+      image: "/images/Cox's Bazar.jpg",
       icon: "DirectionsBoat",
       description: "Longest natural sea beach in the world.",
       fullContent: `
@@ -61,7 +61,7 @@ export const footprintsData = [
       location: "Sylhet",
       date: "June 2023",
       category: "Nature",
-      image: "https://images.unsplash.com/photo-1588661708842-8cbf91461bd2?auto=format&fit=crop&q=80&w=1000",
+      image: "/images/Sylhet Tea Gardens.jpg",
       icon: "Landscape",
       description: "Lush green carpets of tea plantations.",
       fullContent: `
@@ -85,7 +85,7 @@ export const footprintsData = [
       location: "Bay of Bengal",
       date: "January 2023",
       category: "Island",
-      image: "https://images.unsplash.com/photo-1543348750-466b55f32f16?auto=format&fit=crop&q=80&w=1000",
+      image: "/images/Saint Martin's Island.jpg",
       icon: "DirectionsBoat",
       description: "The only coral island of Bangladesh.",
       fullContent: `
@@ -109,7 +109,7 @@ export const footprintsData = [
       location: "Khulna",
       date: "February 2022",
       category: "Wildlife",
-      image: "https://images.unsplash.com/photo-1603507117180-2a2b724f7961?auto=format&fit=crop&q=80&w=1000",
+      image: "/images/Sundarbans.jpg",
       icon: "PhotoCamera",
       description: "Largest mangrove forest in the world.",
       fullContent: `
@@ -133,7 +133,7 @@ export const footprintsData = [
       location: "Hill Tracts",
       date: "October 2021",
       category: "Trekking",
-      image: "https://images.unsplash.com/photo-1627918341624-60c7c34ef19a?auto=format&fit=crop&q=80&w=1000",
+      image: "/images/Bandarban.jpg",
       icon: "NearMe",
       description: "Exploring the highest peaks of the country.",
       fullContent: `

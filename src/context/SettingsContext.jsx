@@ -14,7 +14,8 @@ export const SettingsProvider = ({ children }) => {
    const [reducedMotion, setReducedMotion] = useState(localStorage.getItem('reducedMotion') === 'true');
 
    // Voice Navigation State
-   const [isVoiceEnabled, setIsVoiceEnabled] = useState(false);
+   const [isVoiceEnabled, setIsVoiceEnabled] = useState(localStorage.getItem('isVoiceEnabled') === 'true');
+   const [isVoiceNavVisible, setIsVoiceNavVisible] = useState(localStorage.getItem('isVoiceNavVisible') !== 'false'); // default true
 
    // AI/Personalization State
    const [visitCount, setVisitCount] = useState(0);
@@ -26,6 +27,8 @@ export const SettingsProvider = ({ children }) => {
       localStorage.setItem('fontSize', fontSize);
       localStorage.setItem('dyslexiaFont', dyslexiaFont);
       localStorage.setItem('reducedMotion', reducedMotion);
+      localStorage.setItem('isVoiceEnabled', isVoiceEnabled);
+      localStorage.setItem('isVoiceNavVisible', isVoiceNavVisible);
 
       // Apply Theme
       const root = document.documentElement;
@@ -60,9 +63,11 @@ export const SettingsProvider = ({ children }) => {
       else if (hour >= 9 && hour < 17) setUserMood('focused');
       else setUserMood('happy');
 
-   }, [theme, fontSize, dyslexiaFont, reducedMotion]);
+      // ...
+   }, [theme, fontSize, dyslexiaFont, reducedMotion, isVoiceEnabled, isVoiceNavVisible]);
 
    const toggleVoice = () => setIsVoiceEnabled(!isVoiceEnabled);
+   const toggleVoiceNavVisible = () => setIsVoiceNavVisible(!isVoiceNavVisible);
 
    return (
       <SettingsContext.Provider value={{
@@ -71,6 +76,7 @@ export const SettingsProvider = ({ children }) => {
          dyslexiaFont, setDyslexiaFont,
          reducedMotion, setReducedMotion,
          isVoiceEnabled, toggleVoice,
+         isVoiceNavVisible, toggleVoiceNavVisible,
          visitCount,
          userMood
       }}>

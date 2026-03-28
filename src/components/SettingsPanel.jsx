@@ -15,7 +15,8 @@ const SettingsPanel = () => {
       fontSize, setFontSize,
       dyslexiaFont, setDyslexiaFont,
       reducedMotion, setReducedMotion,
-      isVoiceEnabled, toggleVoice
+      isVoiceEnabled, toggleVoice,
+      isVoiceNavVisible, toggleVoiceNavVisible
    } = useSettings();
 
    const panelVariants = {
@@ -140,15 +141,15 @@ const SettingsPanel = () => {
                         <MicIcon fontSize="small" /> Voice Control
                      </h3>
                      <button
-                        onClick={toggleVoice}
-                        className={`w-full p-4 rounded-xl flex items-center justify-between transition-all ${isVoiceEnabled
+                        onClick={toggleVoiceNavVisible}
+                        className={`w-full p-4 rounded-xl flex items-center justify-between transition-all ${isVoiceNavVisible
                            ? 'bg-primary text-white shadow-lg shadow-primary/30'
                            : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
                            }`}
                      >
-                        <span className="font-medium">Voice Navigation</span>
-                        <div className={`w-12 h-6 rounded-full p-1 transition-colors ${isVoiceEnabled ? 'bg-white/30' : 'bg-gray-300 dark:bg-gray-600'}`}>
-                           <div className={`w-4 h-4 rounded-full bg-white shadow-sm transition-transform ${isVoiceEnabled ? 'translate-x-6' : ''}`} />
+                        <span className="font-medium">Voice Navigation Bubble</span>
+                        <div className={`w-12 h-6 rounded-full p-1 transition-colors ${isVoiceNavVisible ? 'bg-white/30' : 'bg-gray-300 dark:bg-gray-600'}`}>
+                           <div className={`w-4 h-4 rounded-full bg-white shadow-sm transition-transform ${isVoiceNavVisible ? 'translate-x-6' : ''}`} />
                         </div>
                      </button>
                      <p className="text-xs text-gray-400 mt-2">
