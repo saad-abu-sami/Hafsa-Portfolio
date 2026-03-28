@@ -13,7 +13,7 @@ export const footprintsData = [
       location: "Rangamati",
       date: "August 2023",
       category: "Hill Tracks",
-      image: "/images/Sajek Valley.jpg",
+      image: "/images/experience/Sajek Valley.jpg",
       icon: "Map",
       description: "A journey above the clouds in the Queen of Hills.",
       fullContent: `
@@ -37,7 +37,7 @@ export const footprintsData = [
       location: "Chittagong",
       date: "December 2022",
       category: "Coastal",
-      image: "/images/Cox's Bazar.jpg",
+      image: "/images/experience/Cox's Bazar.jpg",
       icon: "DirectionsBoat",
       description: "Longest natural sea beach in the world.",
       fullContent: `
@@ -61,7 +61,7 @@ export const footprintsData = [
       location: "Sylhet",
       date: "June 2023",
       category: "Nature",
-      image: "/images/Sylhet Tea Gardens.jpg",
+      image: "/images/experience/Sylhet Tea Gardens.jpg",
       icon: "Landscape",
       description: "Lush green carpets of tea plantations.",
       fullContent: `
@@ -85,7 +85,7 @@ export const footprintsData = [
       location: "Bay of Bengal",
       date: "January 2023",
       category: "Island",
-      image: "/images/Saint Martin's Island.jpg",
+      image: "/images/experience/Saint Martin's Island.jpg",
       icon: "DirectionsBoat",
       description: "The only coral island of Bangladesh.",
       fullContent: `
@@ -109,7 +109,7 @@ export const footprintsData = [
       location: "Khulna",
       date: "February 2022",
       category: "Wildlife",
-      image: "/images/Sundarbans.jpg",
+      image: "/images/experience/Sundarbans.jpg",
       icon: "PhotoCamera",
       description: "Largest mangrove forest in the world.",
       fullContent: `
@@ -133,7 +133,7 @@ export const footprintsData = [
       location: "Hill Tracts",
       date: "October 2021",
       category: "Trekking",
-      image: "/images/Bandarban.jpg",
+      image: "/images/experience/Bandarban.jpg",
       icon: "NearMe",
       description: "Exploring the highest peaks of the country.",
       fullContent: `
